@@ -1,6 +1,6 @@
 # Ask PDF
 
-A basic PDF Question Answering project built using Retrieval-Augmented Generation (RAG).
+A PDF Question Answering project built using Retrieval-Augmented Generation (RAG).
 
 ## Architecture
 
@@ -14,7 +14,7 @@ PDF → PyMuPDF → Text Chunks → Gemini Embeddings → FAISS → Similarity S
 - PyMuPDF
 - Gemini Embeddings
 - FAISS
-- Gemini 2.5 Flash
+- Gemini 3.8 Flash
 
 ## Setup
 
@@ -31,10 +31,12 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-3. Open `.env` and add your Gemini API key:
+3. Open `.env` and add:
 
 ```env
 GOOGLE_API_KEY=your_actual_api_key
+LLM_MODEL=gemini-3.8-flash
+EMBEDDING_MODEL=gemini-embedding-2
 ```
 
 4. Run:
@@ -47,7 +49,7 @@ Keep `.env` private and do not commit it to GitHub.
 
 ## Current Scope
 
-This version intentionally focuses only on basic RAG:
+This version intentionally focuses only on RAG:
 
 1. Load PDF
 2. Split PDF text into chunks
