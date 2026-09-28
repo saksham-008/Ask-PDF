@@ -1,4 +1,4 @@
-streamlit
+streamlit[pdf]
 python-dotenv
 langchain
 langchain-community
